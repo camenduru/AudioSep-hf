@@ -7,6 +7,7 @@ import librosa
 import numpy as np
 import torch
 
+from gradio_examples import EXAMPLES
 from pipeline import build_audiosep
 
 CHECKPOINTS_DIR = Path("checkpoint")
@@ -59,11 +60,11 @@ with gr.Blocks(title="AudioSep") as demo:
     gr.Markdown(description)
     with gr.Row():
         with gr.Column():
-            input_audio = gr.Audio(type="filepath")
-            text = gr.Textbox()
+            input_audio = gr.Audio(label="Mixture", type="filepath")
+            text = gr.Textbox(label="Text Query")
         with gr.Column():
             with gr.Column():
-                output_audio = gr.Audio(scale=10)
+                output_audio = gr.Audio(label="Separation Result", scale=10)
                 button = gr.Button(
                     "Separate",
                     variant="primary",
@@ -74,5 +75,8 @@ with gr.Blocks(title="AudioSep") as demo:
                 button.click(
                     fn=inference, inputs=[input_audio, text], outputs=[output_audio]
                 )
+
+    gr.Markdown("## Examples")
+    gr.Examples(examples=EXAMPLES, inputs=[input_audio, text])
 
 demo.queue().launch(share=True)
