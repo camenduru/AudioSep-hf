@@ -59,7 +59,7 @@ with gr.Blocks(title="AudioSep") as demo:
     gr.Markdown(description)
     with gr.Row():
         with gr.Column():
-            input_audio = gr.Audio()
+            input_audio = gr.Audio(type="filepath")
             text = gr.Textbox()
         with gr.Column():
             with gr.Column():
