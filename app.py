@@ -22,7 +22,7 @@ description = """
 # AudioSep: Separate Anything You Describe
 [[Project Page]](https://audio-agi.github.io/Separate-Anything-You-Describe) [[Paper]](https://audio-agi.github.io/Separate-Anything-You-Describe/AudioSep_arXiv.pdf) [[Code]](https://github.com/Audio-AGI/AudioSep)
 
-We introduce AudioSep, a foundation model for open-domain sound separation with natural language queries.
+AudioSep is a foundation model for open-domain sound separation with natural language queries.
 AudioSep demonstrates strong separation performance and impressivezero-shot generalization ability on
 numerous tasks such as audio event separation, musical instrument separation, and speech enhancement.
 """
