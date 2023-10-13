@@ -12,4 +12,5 @@ EXAMPLES = [
         "A ticktock sound playing at the same rhythm with piano.",
     ],
     [EXAMPLES_DIR / "water_drops.wav", "water drops"],
+    [EXAMPLES_DIR / "noisy_speech.wav", "speech"],
 ]
